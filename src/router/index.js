@@ -1,25 +1,43 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+// 引入路由组件
+import NavbarView from '../views/NavbarView.vue'
+import LoginView from '../views/LoginView.vue'
+import IndexView from '../views/IndexView.vue'
+import ClassifyView from '../views/ClassifyView.vue'
+import CartView from '../views/CartView.vue'
+import UserView from '../views/UserView.vue'
+
+//配置路由
+let routes = [
+	// 选项路由
+	{
+		path : '/',
+		redirect : '/navbar/index'
+	},
+	
+	{
+		path : '/navbar',
+		component : NavbarView,
+		children : [
+			{path : '/navbar/index', component : IndexView},
+			{path : '/navbar/classify', component : ClassifyView},
+			{path : '/navbar/cart', component : CartView},
+			{path : '/navbar/user', component : UserView},
+		]
+	},
+	//登录路由页面
+	{
+		path : '/login',
+		component : LoginView
+	},
 ]
 
+// 创建路由实例
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+	history : createWebHashHistory(),
+	routes,
 })
 
+// 导出
 export default router
