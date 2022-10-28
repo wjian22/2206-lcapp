@@ -6,9 +6,26 @@ import {
 	ConfigProvider,
 	Icon,
 	Search,
+	Tab, 
+	Tabs,
+	Sticky,
+	Swipe, 
+	SwipeItem,
+	Image as VanImage,
+	Lazyload,
+	Loading 
+
 } from 'vant'
 
 export default function(app){
+	app.use(Loading)
+	app.use(Lazyload)
+	app.use(VanImage)
+	app.use(Swipe)
+	app.use(SwipeItem)
+	app.use(Sticky)
+	app.use(Tab)
+	app.use(Tabs)
 	app.use(Search)
 	app.use(Icon)
 	app.use(ConfigProvider)

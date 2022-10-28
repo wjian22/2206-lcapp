@@ -2,4 +2,6 @@
 :root{
 	/* --van-tabbar-background-color : rgba(255, 0,0,.5); */
 	/* --van-button-default-background-color : red; */
+
+	--van-tabs-bottom-bar-color : #CC3A8C;
 }

@@ -13,7 +13,22 @@ import './assets/fonts/iconfont.css'
 // 引入vant模块
 import Vant from './vant'
 
+// 引入axios
+// import Axios from 'axios'
+// import VueAxios from 'vue-axios'
+// import Qs from 'qs'
+
+// 引入api模块
+import API from './api'
+
 let app = createApp(App)
+
+//使用axios
+// app.use(VueAxios, Axios)
+// app.config.globalProperties.qs = Qs
+
+// 把API挂载
+app.config.globalProperties.api = API
 
 // 使用路由
 app.use(router)
