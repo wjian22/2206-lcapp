@@ -7,6 +7,7 @@ import IndexView from '../views/IndexView.vue'
 import ClassifyView from '../views/ClassifyView.vue'
 import CartView from '../views/CartView.vue'
 import UserView from '../views/UserView.vue'
+import SearchView from '../views/SearchView.vue'
 
 //配置路由
 let routes = [
@@ -25,6 +26,11 @@ let routes = [
 			{path : '/navbar/cart', component : CartView},
 			{path : '/navbar/user', component : UserView},
 		]
+	},
+	// 搜索路由页面
+	{
+		path : '/search',
+		component : SearchView
 	},
 	//登录路由页面
 	{

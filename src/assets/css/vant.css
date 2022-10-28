@@ -1,5 +1,5 @@
 /* 全局修改：定义vant变量 */
 :root{
-	/* --van-tabbar-background-color : green; */
+	/* --van-tabbar-background-color : rgba(255, 0,0,.5); */
 	/* --van-button-default-background-color : red; */
 }

@@ -4,10 +4,12 @@ import {
 	Tabbar, 
 	TabbarItem,
 	ConfigProvider,
-	Icon 
+	Icon,
+	Search,
 } from 'vant'
 
 export default function(app){
+	app.use(Search)
 	app.use(Icon)
 	app.use(ConfigProvider)
 	app.use(Tabbar)
