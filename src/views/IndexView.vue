@@ -17,13 +17,18 @@
 			 v-for="item in catList"
 			 :key="item.cat_id"
 			 :title="item.cat_name"
+			 :name="item.cat_id"
 			 >
-			  <!-- 具体分类的内容 使用组件渲染 -->
-				<!-- <component is="HomeContent"></component> -->
-				<home-content 
+			  <!--动态切换组件 具体分类的内容 使用组件渲染 is属性值为组件名！-->
+				<component 
+				 :id="item.cat_id" 
+				 :name="item.cat_name" 
+				 :is="active == '0000' ? 'HomeContent' : 'OtherContent'"
+				></component>
+				<!-- <home-content 
 				 :name="item.cat_name"
 				 :id="item.cat_id"
-				></home-content>
+				></home-content> -->
 			</van-tab>
 		</van-tabs>
 
@@ -34,14 +39,18 @@
 	// 引入组件
 	import WjSearch from '../components/WjSearch.vue'
 	import HomeContent from '../components/home/HomeContent.vue'
-	// 引入api方法
-	// import { getCatData, getHotData } from '../api/index.js'
+	import OtherContent from '../components/home/OtherContent.vue'
 
 	export default {
+		components : {
+			WjSearch,
+			HomeContent,
+			OtherContent
+		},
 
 		data(){
 			return {
-				active : 0,
+				active : '0000',
 				catList : []
 			}
 		},
@@ -49,11 +58,6 @@
 		async created(){
 			this.catList = await this.api.getCatData();
 			this.catList.unshift({cat_id : '0000', cat_name : '首页'});
-		},
-
-		components : {
-			WjSearch,
-			HomeContent
 		},
 
 		methods : {
