@@ -9,6 +9,7 @@ import CartView from '../views/CartView.vue'
 import UserView from '../views/UserView.vue'
 import SearchView from '../views/SearchView.vue'
 import ProductView from '../views/ProductView.vue'
+import ClassifyListView from '../views/ClassifyListView.vue'
 
 //配置路由
 let routes = [
@@ -21,6 +22,11 @@ let routes = [
 	{
 		path : '/product',
 		component : ProductView
+	},
+	//商品分类列表路由页面
+	{
+		path : '/classifylist',
+		component : ClassifyListView
 	},
 	{
 		path : '/navbar',

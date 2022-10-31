@@ -19,6 +19,7 @@
 			 :title="item.cat_name"
 			 >
 			  <!-- 具体分类的内容 使用组件渲染 -->
+				<!-- <component is="HomeContent"></component> -->
 				<home-content 
 				 :name="item.cat_name"
 				 :id="item.cat_id"

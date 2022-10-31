@@ -19,13 +19,13 @@ export default {
     let { data } = await axios.get('http://159.75.89.136:3000/api_goods', {
       params : datas
     });
-    console.log(data);
+    // console.log(data);
     if(data.code != 0){
       console.log(data)
       console.log('请求导航分类数据');
       return;
     };
-    console.log(data.data)
+    // console.log(data.data)
     return data.data;
   },
 
