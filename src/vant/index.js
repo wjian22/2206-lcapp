@@ -13,11 +13,13 @@ import {
 	SwipeItem,
 	Image as VanImage,
 	Lazyload,
-	Loading 
+	Loading,
+	NavBar 
 
 } from 'vant'
 
 export default function(app){
+	app.use(NavBar)
 	app.use(Loading)
 	app.use(Lazyload)
 	app.use(VanImage)

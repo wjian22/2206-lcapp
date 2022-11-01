@@ -28,6 +28,7 @@ let routes = [
 		path : '/classifylist',
 		component : ClassifyListView
 	},
+	
 	{
 		path : '/navbar',
 		component : NavbarView,

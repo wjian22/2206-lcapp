@@ -23,7 +23,9 @@ module.exports = defineConfig({
 		],
 	},
 
-	publicPath : ''
+	// 在打包时候设置为相对路径，
+	//如果是开发环境启动项目要设置为默认的绝对路径
+	// publicPath : ''
 	
 	
 	
