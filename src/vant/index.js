@@ -14,11 +14,19 @@ import {
 	Image as VanImage,
 	Lazyload,
 	Loading,
-	NavBar 
+	NavBar,
+	Form, 
+	Field, 
+	CellGroup,
+	Toast
 
 } from 'vant'
 
 export default function(app){
+	app.use(Toast)
+	app.use(Form)
+	app.use(Field)
+	app.use(CellGroup)
 	app.use(NavBar)
 	app.use(Loading)
 	app.use(Lazyload)

@@ -68,4 +68,22 @@ export default {
     return data.data;
   },
 
+  // 请求分类数据的方法
+  async getUserData(obj){
+    let { data } = await axios.post('http://159.75.89.136:3000/api_user', qs.stringify(obj));
+    //console.log(data);
+    return data;
+  },
+
+  // 查看购物车数据的方法
+  async getCartViewData(obj){
+    let { data } = await axios.post('http://159.75.89.136:3000/api_cart', qs.stringify(obj));
+    if(data.code != 0){
+      console.log(data)
+      console.log('查看购物车数据的方法');
+      return;
+    };
+    return data.data;
+  },
+
 }

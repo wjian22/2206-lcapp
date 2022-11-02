@@ -10,6 +10,7 @@ import UserView from '../views/UserView.vue'
 import SearchView from '../views/SearchView.vue'
 import ProductView from '../views/ProductView.vue'
 import ClassifyListView from '../views/ClassifyListView.vue'
+import RegisterView from '../views/RegisterView.vue'
 
 //配置路由
 let routes = [
@@ -48,6 +49,11 @@ let routes = [
 	{
 		path : '/login',
 		component : LoginView
+	},
+	//注册路由页面
+	{
+		path : '/register',
+		component : RegisterView
 	},
 ]
 

@@ -13,6 +13,9 @@ import './assets/fonts/iconfont.css'
 // 引入vant模块
 import Vant from './vant'
 
+//引入vant 轻提示样式
+import 'vant/es/toast/style'
+
 // 引入axios
 // import Axios from 'axios'
 // import VueAxios from 'vue-axios'
@@ -37,3 +40,4 @@ app.use(router)
 app.use(Vant)
 
 app.mount('#app')
+// console.log(app);

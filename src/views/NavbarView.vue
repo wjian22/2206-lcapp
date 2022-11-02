@@ -33,7 +33,7 @@
 				tabbarList : [
 					{id : 1, to : '/navbar/index', text : '首页', icon : 'wap-home-o', iconAc : 'wap-home', badge : ''},
 					{id : 2, to : '/navbar/classify', text : '分类', icon : 'point-gift-o', iconAc : 'point-gift', badge : ''},
-					{id : 3, to : '/navbar/cart', text : '购物车', icon : 'shopping-cart-o', iconAc : 'shopping-cart', badge : '3'},
+					{id : 3, to : '/navbar/cart', text : '购物车', icon : 'shopping-cart-o', iconAc : 'shopping-cart', badge : '34'},
 					{id : 4, to : '/navbar/user', text : '我的', icon : 'manager-o', iconAc : 'manager', badge : ''},
 				]
 			}
