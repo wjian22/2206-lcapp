@@ -2,7 +2,7 @@
   <div id="classify-list">
 
     <!-- 分类列表里面 调用导航栏 -->
-    <wj-navbar title="商品列表" :show-icon-cart="showIconCart" :cart-number="cartNumber"></wj-navbar>
+    <wj-navbar title="商品列表" left-text="返回" :show-icon-cart="showIconCart" :cart-number="cartNumber"></wj-navbar>
     <!-- <wj-navbar title="商品列表" :show-icon-cart="false" cart-number="6"></wj-navbar> -->
 
     <h1 v-for="item in 30">上{{item}}</h1>
@@ -32,9 +32,15 @@ export default {
   methods : {
     // 求购物车数量
     getCartCount(){
+      let token = window.localStorage.getItem('token');
+      if(!token){
+        this.cartNumber = '';
+        return
+      };
+
       this.api.getCartViewData({
         status : 'viewcart',
-        userId : window.localStorage.getItem('token')
+        userId : token
       }).then(result => {
         this.cartNumber = result.length;
       })

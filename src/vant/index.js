@@ -18,11 +18,25 @@ import {
 	Form, 
 	Field, 
 	CellGroup,
-	Toast
+	Toast,
+	Empty,
+	SwipeCell,
+	Card,
+	Radio,
+	RadioGroup,
+	Checkbox,
+	Stepper 
 
 } from 'vant'
 
 export default function(app){
+	app.use(Stepper)
+	app.use(Checkbox)
+	app.use(RadioGroup)
+	app.use(Radio)
+	app.use(Card)
+	app.use(SwipeCell)
+	app.use(Empty)
 	app.use(Toast)
 	app.use(Form)
 	app.use(Field)

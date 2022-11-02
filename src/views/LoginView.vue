@@ -1,7 +1,7 @@
 <template>
 	<div id="login-view">
 		<!-- 登录里面调用 -->
-		<wj-navbar title="良仓"></wj-navbar>
+		<wj-navbar title="良仓" left-text="首页"></wj-navbar>
 
 		<div class="login-content">
 		<!-- 表单 -->

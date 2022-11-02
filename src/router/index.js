@@ -63,5 +63,19 @@ const router = createRouter({
 	routes,
 })
 
+//设置一个路由挂载
+router.beforeEach((to, from, next) => {
+	//调用next方法，不传递参数，同之前路由
+	//next();
+	let TOKEN = window.localStorage.getItem('token');
+	//传递参数为：路由路径
+	if(!TOKEN && (to.path == '/navbar/cart' || to.path == '/navbar/user')){
+		next('/login');	
+		return;
+	};
+	
+	next();
+})
+
 // 导出
 export default router

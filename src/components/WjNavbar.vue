@@ -2,8 +2,8 @@
 
     <van-nav-bar 
      :title="title"
-     left-arrow
-     left-text="返回"
+     :left-arrow="leftArrow"
+     :left-text="leftText"
      placeholder
      fixed
      safe-area-inset-top
@@ -21,10 +21,25 @@
 
 <script>
   export default {
-    props : ['title', 'cartNumber', 'showIconCart'],
+    // props : ['title', 'cartNumber', 'showIconCart', 'leftText'],
+    props : {
+      title : String,
+      cartNumber : [String, Number],
+      showIconCart : Boolean,
+      leftText : String,
+      leftArrow : {
+        type : Boolean,
+        default : true
+      }
+    },
+
     methods : {
       clickLeftHandler(){
-        this.$router.back();
+        if(this.title == '商品列表'){
+          this.$router.back();
+        }else{
+          this.$router.push('/');
+        }
       }
     }
 

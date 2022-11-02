@@ -1,8 +1,9 @@
 <template>
 	<div id="navbar-view">
+
 		<!-- 路由内容 -->
-		<router-view></router-view>
-		
+		<router-view @changebadge="changebadgeH"></router-view>
+
 		<!-- 选项卡切换按钮 -->
 		<van-tabbar 
 		 route 
@@ -13,7 +14,7 @@
 				v-for="item in tabbarList"
 				:key="item.id"
 				:to="item.to"
-				:badge="item.badge"
+				:badge="item.badge"		
 			>
 				<span>{{item.text}}</span>
 				<template #icon="props">
@@ -30,18 +31,45 @@
 	export default {
 		data(){
 			return {
-				tabbarList : [
-					{id : 1, to : '/navbar/index', text : '首页', icon : 'wap-home-o', iconAc : 'wap-home', badge : ''},
-					{id : 2, to : '/navbar/classify', text : '分类', icon : 'point-gift-o', iconAc : 'point-gift', badge : ''},
-					{id : 3, to : '/navbar/cart', text : '购物车', icon : 'shopping-cart-o', iconAc : 'shopping-cart', badge : '34'},
-					{id : 4, to : '/navbar/user', text : '我的', icon : 'manager-o', iconAc : 'manager', badge : ''},
-				]
+				cartNumber : '',
 			}
 		},
+
+		computed : {
+			tabbarList(){
+				return [
+					{id : 1, to : '/navbar/index', text : '首页', icon : 'wap-home-o', iconAc : 'wap-home', badge : ''},
+					{id : 2, to : '/navbar/classify', text : '分类', icon : 'point-gift-o', iconAc : 'point-gift', badge : ''},
+					{id : 3, to : '/navbar/cart', text : '购物车', icon : 'shopping-cart-o', iconAc : 'shopping-cart', badge : this.cartNumber},
+					{id : 4, to : '/navbar/user', text : '我的', icon : 'manager-o', iconAc : 'manager', badge : ''},
+				]
+			} 
+		},
 		
+		mounted(){
+			this.getCartCount();
+		},
+
 		methods : {
-			changeNavbarH(val){
-				console.log(val);
+			changebadgeH(){
+				this.getCartCount();
+			},
+
+			// 求购物车数量
+			getCartCount(){
+				let token = window.localStorage.getItem('token');
+				if(!token){
+					this.cartNumber = '';
+					return
+				};
+
+				this.api.getCartViewData({
+					status : 'viewcart',
+					userId : token
+				}).then(result => {
+					this.cartNumber = result.length;
+					console.log(this.cartNumber)
+				})
 			}
 		}
 	}
