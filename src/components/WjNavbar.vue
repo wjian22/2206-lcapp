@@ -35,7 +35,7 @@
 
     methods : {
       clickLeftHandler(){
-        if(this.title == '商品列表'){
+        if(this.title != '登录'){
           this.$router.back();
         }else{
           this.$router.push('/');

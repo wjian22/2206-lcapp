@@ -9,6 +9,8 @@
 		 route 
 		 active-color="#CC3A8C" 
 		 inactive-color="#666"
+		 z-index="999"
+		 class="wj-tabbar"
 		>
 		  <van-tabbar-item
 				v-for="item in tabbarList"
@@ -77,5 +79,13 @@
 </script>
 
 <style lang="less" scoped>
-
+	// .wj-tabbar:before{
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0px;
+	// 	top:-1px;
+	// 	width:100%;
+	// 	border-top: 1px solid #eee;
+	// 	// transform: scaleY(0.6);
+	// }
 </style>

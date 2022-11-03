@@ -11,6 +11,8 @@ import SearchView from '../views/SearchView.vue'
 import ProductView from '../views/ProductView.vue'
 import ClassifyListView from '../views/ClassifyListView.vue'
 import RegisterView from '../views/RegisterView.vue'
+import AddressView from '../views/AddressView.vue'
+import OrderView from '../views/OrderView.vue'
 
 //配置路由
 let routes = [
@@ -54,6 +56,16 @@ let routes = [
 	{
 		path : '/register',
 		component : RegisterView
+	},
+	//地址路由页面
+	{
+		path : '/address',
+		component : AddressView
+	},
+	//订单路由页面
+	{
+		path : '/order',
+		component : OrderView
 	},
 ]
 

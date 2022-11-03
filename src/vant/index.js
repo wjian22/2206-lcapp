@@ -25,11 +25,12 @@ import {
 	Radio,
 	RadioGroup,
 	Checkbox,
-	Stepper 
-
+	Stepper,
+	SubmitBar
 } from 'vant'
 
 export default function(app){
+	app.use(SubmitBar)
 	app.use(Stepper)
 	app.use(Checkbox)
 	app.use(RadioGroup)

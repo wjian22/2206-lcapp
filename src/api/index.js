@@ -86,4 +86,26 @@ export default {
     return data.data;
   },
 
+  // 加入和更新购物车数据的方法
+  async getCartAddData(obj){
+    let { data } = await axios.post('http://159.75.89.136:3000/api_cart', qs.stringify(obj));
+    if(data.code != 0){
+      console.log(data)
+      console.log('更新购物车数据的方法');
+      return;
+    };
+    return data;
+  },
+
+  // 删除购物车数据的方法
+  async getCartDelData(obj){
+    let { data } = await axios.post('http://159.75.89.136:3000/api_cart', qs.stringify(obj));
+    if(data.code != 0){
+      console.log(data)
+      console.log('更新购物车数据的方法');
+      return;
+    };
+    return true;
+  },
+
 }
