@@ -10,7 +10,7 @@
      @click-left="clickLeftHandler"
     >
 
-      <template v-if="title == '商品列表'" #right>
+      <template v-if="title == '商品列表' || title == '商品详情'" #right>
         <span @click="$router.push('/login')" v-if="!showIconCart" style="color: #fff;">登录</span>
         <van-icon @click="$router.push('/navbar/cart')" v-if="showIconCart" size="24" name="cart-o" :badge="cartNumber"></van-icon>
       </template>

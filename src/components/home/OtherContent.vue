@@ -1,7 +1,14 @@
 <template>
   <div class="other-content">
     <!-- {{name}}--{{id}} -->
-    <wj-banner :banner-list="bannerList"></wj-banner>
+    <wj-banner 
+     :banner-list="bannerList"
+     margin-top="10"
+     padding-left="10"
+     padding-right="10"
+     :img-size="475/1000"
+     radius="16"
+    ></wj-banner>
     <!-- 专题 -->
     <div class="special-content">
       <h1>专题</h1>

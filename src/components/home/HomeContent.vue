@@ -1,6 +1,13 @@
 <template>
   <!-- 轮播图 -->
-  <wj-banner :banner-list="bannerList"></wj-banner>
+  <wj-banner 
+   :banner-list="bannerList"
+   margin-top="10"
+   padding-left="10"
+   padding-right="10"
+   :img-size="475/1000"
+   radius="16"
+  ></wj-banner>
 
   <!-- 广告位 -->
   <wj-ad :ad-list="adList1"></wj-ad>

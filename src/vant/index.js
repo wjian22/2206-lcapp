@@ -26,10 +26,20 @@ import {
 	RadioGroup,
 	Checkbox,
 	Stepper,
-	SubmitBar
+	SubmitBar,
+	Popup,
+	ActionSheet,
+	ActionBar, 
+	ActionBarIcon, 
+	ActionBarButton
 } from 'vant'
 
 export default function(app){
+	app.use(ActionBarButton)
+	app.use(ActionBarIcon)
+	app.use(ActionBar)
+	app.use(ActionSheet)
+	app.use(Popup)
 	app.use(SubmitBar)
 	app.use(Stepper)
 	app.use(Checkbox)
