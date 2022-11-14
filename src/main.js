@@ -9,6 +9,7 @@ import './assets/css/base.css'
 import './assets/css/vant.css'
 // 引入字体图标样式
 import './assets/fonts/iconfont.css'
+import './assets/css/animate.css'
 
 // 引入vant模块
 import Vant from './vant'

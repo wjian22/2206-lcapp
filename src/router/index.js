@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 
 // 引入路由组件
 import NavbarView from '../views/NavbarView.vue'
@@ -72,6 +72,8 @@ let routes = [
 // 创建路由实例
 const router = createRouter({
 	history : createWebHashHistory(),
+	// 使用html5模式的
+	// history : createWebHistory(),
 	routes,
 })
 

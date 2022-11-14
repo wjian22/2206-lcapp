@@ -2,7 +2,15 @@
 	<div id="navbar-view">
 
 		<!-- 路由内容 -->
-		<router-view @changebadge="changebadgeH"></router-view>
+		<!-- 路由渲染 -->
+		<transition
+			mode="out-in"
+			enter-active-class="animate__animated animate__swing" 
+			leave-active-class="animate__animated animate__fadeOut"
+			>
+			<router-view @changebadge="changebadgeH"></router-view>
+		</transition>
+		<!-- <router-view></router-view> -->
 
 		<!-- 选项卡切换按钮 -->
 		<van-tabbar 

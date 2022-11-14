@@ -14,6 +14,12 @@
 		 title-inactive-color="#666"
 		 line-width="30"
 		 >
+
+		  <transition-group
+			 enter-active-class="animate__animated animate__swing" 
+			 leave-active-class="animate__animated animate__swing"
+			>
+
 			<van-tab
 			 v-for="item in catList"
 			 :key="item.cat_id"
@@ -31,6 +37,7 @@
 				 :id="item.cat_id"
 				></home-content> -->
 			</van-tab>
+		</transition-group>
 		</van-tabs>
 
 	</div>

@@ -1,7 +1,13 @@
 <template>
 	
 	<!-- 路由渲染 -->
-	<router-view></router-view>
+	<transition
+	 mode="out-in"
+	 enter-active-class="animate__animated animate__swing" 
+   leave-active-class="animate__animated animate__fadeOut"
+	>
+		<router-view></router-view>
+	</transition>
 	
 </template>
 

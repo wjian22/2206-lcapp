@@ -1,4 +1,5 @@
 <template>
+  <div>
   <!-- 轮播图 -->
   <wj-banner 
    :banner-list="bannerList"
@@ -15,7 +16,7 @@
 
   <!-- 分类商吕 -->
   <wj-home-goods v-for="item in catHotList" :key="item.cat_id" :goods-list="item"></wj-home-goods>
-
+  </div>
 </template>
 
 <script>

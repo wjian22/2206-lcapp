@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="other-content">
     <!-- {{name}}--{{id}} -->
     <wj-banner 
@@ -25,7 +26,7 @@
     </div>
 
   </div>
-  
+</div>
 </template>
 
 <script>
